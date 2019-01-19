@@ -13,6 +13,7 @@ const ProductsContainer = ({
 }) => (
   <section>
     <h1>
+      {products.length === 0 ? 'No ' : ''}
       Products
       {query === 'all' ? '' : getHeadingText(query)}
     </h1>
