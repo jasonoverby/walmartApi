@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: path.join(__dirname, './client.js'),
+  mode: 'development',
   resolve: {
     extensions: ['.js', '.jsx'],
   },
@@ -14,7 +15,10 @@ module.exports = {
       test: /\.jsx$/,
       loader: 'babel-loader',
       query: {
-        presets: ['react', 'env'],
+        presets: [
+          '@babel/preset-react',
+          '@babel/preset-env',
+        ],
       },
     }],
   },
