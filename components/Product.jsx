@@ -1,31 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProductData from './ProductData.jsx';
-import ProductInfo from './ProductInfo.jsx';
+import ProductData from './ProductData';
+import ProductInfo from './ProductInfo';
 
 class Product extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.props.handleToggleProduct(this.props.product);
+  handleClick = () => {
+    const { handleToggleProduct, product } = this.props;
+    handleToggleProduct(product);
   }
 
   render() {
-    const { product } = this.props;
+    const { product, viewProduct } = this.props;
 
     return (
       <li>
-        {this.props.viewProduct
-          ? <ProductData
-            product={product}
-          />
-          : <ProductInfo product={this.props.product} />}
+        {viewProduct
+          ? (
+            <ProductData
+              product={product}
+            />
+          )
+          : <ProductInfo product={product} />}
 
-        <button onClick={this.handleClick}>
-          Show {this.props.viewProduct ? 'Products' : 'More'}
+        <button type="button" onClick={this.handleClick}>
+          Show
+          {viewProduct ? ' Products' : ' More'}
         </button>
       </li>
     );

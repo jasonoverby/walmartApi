@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProductsContainer from './ProductsContainer.jsx';
-import Product from './Product.jsx';
+import ProductsContainer from './ProductsContainer';
+import Product from './Product';
 
 class ToggleableProductsContainer extends React.Component {
   constructor(props) {
@@ -10,32 +10,36 @@ class ToggleableProductsContainer extends React.Component {
       viewProduct: false,
       product: {},
     };
-
-    this.handleToggleProduct = this.handleToggleProduct.bind(this);
   }
 
-  handleToggleProduct(product) {
-    this.setState({
+  handleToggleProduct = (product) => {
+    this.setState(prevState => ({
       product,
-      viewProduct: !this.state.viewProduct,
-    });
+      viewProduct: !prevState.viewProduct,
+    }));
   }
 
   render() {
+    const { product, viewProduct } = this.state;
+    const {
+      products,
+      query,
+    } = this.props;
+
     return (
       <main>
-        {this.state.viewProduct ? (
+        {viewProduct ? (
           <Product
             handleToggleProduct={this.handleToggleProduct}
-            product={this.state.product}
-            viewProduct={this.state.viewProduct}
+            product={product}
+            viewProduct={viewProduct}
           />
         ) : (
           <ProductsContainer
-            products={this.props.products}
-            query={this.props.query}
+            products={products}
+            query={query}
             handleToggleProduct={this.handleToggleProduct}
-            viewProduct={this.state.viewProduct}
+            viewProduct={viewProduct}
           />
         )}
 
