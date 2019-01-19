@@ -505,14 +505,15 @@
     "shortDescription": "Bigger screen than a smartphone; smaller and more convenient than a laptop &mdash; don't let the in-between size of this mini tablet fool you, because this powerful little device boasts some serious computing chops in a sleekly-designed package. The Apple iPad mini 2 offers a stunning 7.9&quot; Retina display with over 3.1 million pixels, so photos and videos look incredibly detailed and text is razor sharp. The device features a powerful and power-efficient A7 chip with 64-bit architecture, so it's &nbsp;remarkably responsive &mdash; while still delivering up to 10 hours of battery life on a single charge. The iPad mini 2 also offers ultrafast wireless, iSight and FaceTime HD cameras, and includes some awesome apps like iPhoto, iMovie, GarageBand, Pages, Numbers and Keynote.1 All this, and it still fits easily in one hand.Apple iPad mini 2 with Retina Display with Wi-Fi Space Gray or Silver:",
     "longDescription": "&lt;b&gt;&lt;br&gt;Apple iPad mini with Retina Display with Wi-Fi Space Gray or Silver:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;7.9&quot; Apple iPad with retina display&lt;/li&gt;&lt;li&gt;A7 chip with M7 motion coprocessor&lt;/li&gt;&lt;li&gt;Built-in Wi-Fi (802.11a/b/g/n) with MIMO support&lt;/li&gt;&lt;li&gt;Up to 10 hours of battery life&lt;sup&gt;1&lt;/sup&gt;&lt;/li&gt;&lt;li&gt;5MP iSight camera with 1080p HD video recording&lt;/li&gt;&lt;li&gt;FaceTime HD camera&lt;/li&gt;&lt;li&gt;iPhoto, iMovie, GarageBand, Pages, Numbers and Keynote apps included&lt;/li&gt;&lt;li&gt;Apple iPad mini 2 WiFi 16gb has over 475,000 apps on the App Store&lt;sup&gt;2&lt;/sup&gt;&lt;/li&gt;&lt;li&gt;iOS 7 and iCloud&lt;/li&gt;&lt;li&gt;Cellular data service on Wi-Fi + cellular models (sold separately)&lt;/li&gt;&lt;li&gt;Available in space gray or silver&lt;/li&gt;&lt;/ul&gt;1 - Battery life varies by use and configuration. See www.apple.com/batteries for more information. &lt;br&gt;2 - Refers to the total number worldwide. Not all content is available in all countries.",
     "brandName": "Apple",
-    "thumbnailImage": "https://i5.walmartimages.com/asr/0240187f-e404-484e-919f-9c50eb44fa34_1.2709d75f3faf1895527f1b9026d6b9cc.gif?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
-    "mediumImage": "https://i5.walmartimages.com/asr/0240187f-e404-484e-919f-9c50eb44fa34_1.2709d75f3faf1895527f1b9026d6b9cc.gif?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
-    "largeImage": "https://i5.walmartimages.com/asr/0240187f-e404-484e-919f-9c50eb44fa34_1.2709d75f3faf1895527f1b9026d6b9cc.gif?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+    "thumbnailImage": "https://i5.walmartimages.com/asr/0240187f-e404-484e-919f-9c50eb44fa34_1.2709d75f3faf1895527f1b9026d6b9cc.gif?odnHeight=100&odnWidth=100&odnBg=ffffff",
+    "mediumImage": "https://i5.walmartimages.com/asr/0240187f-e404-484e-919f-9c50eb44fa34_1.2709d75f3faf1895527f1b9026d6b9cc.gif?odnHeight=180&odnWidth=180&odnBg=ffffff",
+    "largeImage": "https://i5.walmartimages.com/asr/0240187f-e404-484e-919f-9c50eb44fa34_1.2709d75f3faf1895527f1b9026d6b9cc.gif?odnHeight=450&odnWidth=450&odnBg=ffffff",
     "productTrackingUrl": "http://linksynergy.walmart.com/fs-bin/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=https%253A%252F%252Fwww.walmart.com%252Fip%252FApple-iPad-mini-2-16GB-WiFi%252F30146244%253Faffp1%253DoIWTPghFoDduvaSTXQQRlToaGCPjUzbt9tHVIxt9Ir4%2526affilsrc%253Dapi",
     "ninetySevenCentShipping": false,
     "standardShipRate": 0,
     "size": "23 oz",
     "color": "Silver",
+    "marketplace": false,
     "shipToStore": true,
     "freeShipToStore": true,
     "modelNumber": "ME279LL/A",
@@ -525,6 +526,9 @@
     ],
     "customerRatingImage": "http://i2.walmartimages.com/i/CustRating/4_8.gif",
     "bestMarketplacePrice": {
+      "price": 169.99,
+      "sellerInfo": "CAL STATE ELECTRONICS RECYCLING, INC.",
+      "standardShipRate": 0,
       "twoThreeDayShippingRate": 65,
       "availableOnline": false,
       "clearance": false
@@ -543,35 +547,6 @@
     "addToCartUrl": "http://c.affil.walmart.com/t/api01?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D30146244%7C1%26affp1%3DoIWTPghFoDduvaSTXQQRlToaGCPjUzbt9tHVIxt9Ir4%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
     "affiliateAddToCartUrl": "http://linksynergy.walmart.com/fs-bin/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Faffil.walmart.com%252Fcart%252FaddToCart%253Fitems%253D30146244%257C1%2526affp1%253DoIWTPghFoDduvaSTXQQRlToaGCPjUzbt9tHVIxt9Ir4%2526affilsrc%253Dapi",
     "freeShippingOver35Dollars": true,
-    "giftOptions": {},
-    "imageEntities": [
-      {
-        "thumbnailImage": "https://i5.walmartimages.com/asr/eb0841bb-a7f4-46c8-a302-ba8e4fbf8be1_1.f3f1ba5657245ef1af17318848016cc6.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
-        "mediumImage": "https://i5.walmartimages.com/asr/eb0841bb-a7f4-46c8-a302-ba8e4fbf8be1_1.f3f1ba5657245ef1af17318848016cc6.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
-        "largeImage": "https://i5.walmartimages.com/asr/eb0841bb-a7f4-46c8-a302-ba8e4fbf8be1_1.f3f1ba5657245ef1af17318848016cc6.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
-        "entityType": "SECONDARY"
-      },
-      {
-        "thumbnailImage": "https://i5.walmartimages.com/asr/a413abf4-02ae-42fe-a146-5f2946eab1a7_1.4b518005edee9b31ca2b0607c01c12d1.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
-        "mediumImage": "https://i5.walmartimages.com/asr/a413abf4-02ae-42fe-a146-5f2946eab1a7_1.4b518005edee9b31ca2b0607c01c12d1.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
-        "largeImage": "https://i5.walmartimages.com/asr/a413abf4-02ae-42fe-a146-5f2946eab1a7_1.4b518005edee9b31ca2b0607c01c12d1.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
-        "entityType": "SECONDARY"
-      },
-      {
-        "thumbnailImage": "https://i5.walmartimages.com/asr/4fc490a7-8b41-4598-930c-3cad14430688_1.83292e10f41a258a9526771505cf9e54.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
-        "mediumImage": "https://i5.walmartimages.com/asr/4fc490a7-8b41-4598-930c-3cad14430688_1.83292e10f41a258a9526771505cf9e54.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
-        "largeImage": "https://i5.walmartimages.com/asr/4fc490a7-8b41-4598-930c-3cad14430688_1.83292e10f41a258a9526771505cf9e54.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
-        "entityType": "SECONDARY"
-      },
-      {
-        "thumbnailImage": "https://i5.walmartimages.com/asr/0240187f-e404-484e-919f-9c50eb44fa34_1.2709d75f3faf1895527f1b9026d6b9cc.gif?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
-        "mediumImage": "https://i5.walmartimages.com/asr/0240187f-e404-484e-919f-9c50eb44fa34_1.2709d75f3faf1895527f1b9026d6b9cc.gif?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
-        "largeImage": "https://i5.walmartimages.com/asr/0240187f-e404-484e-919f-9c50eb44fa34_1.2709d75f3faf1895527f1b9026d6b9cc.gif?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
-        "entityType": "PRIMARY"
-      }
-    ],
-    "offerType": "ONLINE_AND_STORE",
-    "isTwoDayShippingEligible": false,
     "availableOnline": false
   },
   {
