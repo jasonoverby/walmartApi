@@ -1,0 +1,33 @@
+{
+  "name": "walmart-api",
+  "version": "1.0.0",
+  "description": "React views for a Hapi API to display Walmart products",
+  "main": "server.js",
+  "scripts": {
+    "start": "webpack --config webpack.js && node server",
+    "test": "jest"
+  },
+  "author": "Jason Overby <j@jasonoverby.com> (http://www.jasonoverby.com/)",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "hapi": "^18.0.0",
+    "hapi-react-views": "^10.0.0",
+    "inert": "^5.1.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "vision": "^5.4.4",
+    "webpack": "^4.28.4"
+  }
+}
