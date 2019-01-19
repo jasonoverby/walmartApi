@@ -44,7 +44,7 @@ const main = async () => {
       // re-rendering
       renderMethod: 'renderToString',
       layoutPath: path.join(__dirname, 'components'),
-      layout: 'Html',
+      layout: 'Layout',
     },
   });
 
@@ -55,6 +55,16 @@ const main = async () => {
     // uses inert plugin for static file
     handler: {
       file: 'bundle.js',
+    },
+  });
+
+  // favicon
+  server.route({
+    method: 'GET',
+    path: '/favicon.ico',
+    // uses inert plugin for static file
+    handler: {
+      file: 'favicon.ico',
     },
   });
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Html = ({ children, state }) => (
+const Layout = ({ children, state }) => (
   <html lang="en">
     <head>
       <title>Walmart Products</title>
@@ -10,6 +10,7 @@ const Html = ({ children, state }) => (
       <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" />
       <link href="https://meyerweb.com/eric/tools/css/reset/reset.css" rel="stylesheet" />
       <link href="main.css" type="text/css" rel="stylesheet" />
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico" />
     </head>
     <body>
       {/* sets markup within root div to child that will be mounted */}
@@ -27,9 +28,9 @@ const Html = ({ children, state }) => (
   </html>
 );
 
-Html.propTypes = {
+Layout.propTypes = {
   children: PropTypes.string.isRequired,
   state: PropTypes.string.isRequired,
 };
 
-export default Html;
+export default Layout;
