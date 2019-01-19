@@ -4,13 +4,10 @@ import ProductsContainer from './ProductsContainer';
 import Product from './Product';
 
 class ToggleableProductsContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      viewProduct: false,
-      product: {},
-    };
-  }
+  state = {
+    viewProduct: false,
+    product: {},
+  };
 
   handleToggleProduct = (product) => {
     this.setState(prevState => ({
