@@ -9,8 +9,11 @@ const {
   getMatchingProducts,
 } = require('./lib/getMatchingProducts');
 
-require('babel-core/register')({
-  presets: ['react', 'env'],
+require('@babel/register')({
+  presets: [
+    '@babel/preset-react',
+    '@babel/preset-env',
+  ],
 });
 
 const main = async () => {
