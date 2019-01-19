@@ -4,21 +4,21 @@ class QueryForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { category: '' };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(e) {
+  handleChange = (e) => {
     this.setState({ category: e.target.value });
   }
 
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault();
-    const categroyPath = this.state.category;
-    window.location = categroyPath;
+    const { category } = this.state;
+    window.location = category;
   }
 
   render() {
+    const { category } = this.state;
+
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -27,7 +27,7 @@ class QueryForm extends React.Component {
             <input
               id="category"
               type="text"
-              value={this.state.category}
+              value={category}
               onChange={this.handleChange}
             />
           </label>

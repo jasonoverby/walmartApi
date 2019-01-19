@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Product from './Product.jsx';
+import Product from './Product';
 
 let key = 0;
 
-const Products = (props) => {
-  const products = props.products.map((product) => {
+const Products = ({ products, handleToggleProduct, viewProduct }) => {
+  const productComponents = products.map((product) => {
     key += 1;
 
     return (
       <Product
         product={product}
-        handleToggleProduct={props.handleToggleProduct}
-        viewProduct={props.viewProduct}
+        handleToggleProduct={handleToggleProduct}
+        viewProduct={viewProduct}
         key={key}
       />
     );
@@ -20,7 +20,7 @@ const Products = (props) => {
 
   return (
     <ul>
-      {products}
+      {productComponents}
     </ul>
   );
 };

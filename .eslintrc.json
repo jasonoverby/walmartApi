@@ -2,7 +2,9 @@
     "extends": "airbnb",
     "parser": "babel-eslint",
     "env": {
-      "jest": true
+      "jest": true,
+      "browser": true,
+      "node": true
     },
     "rules": {
       "no-await-in-loop": 0,

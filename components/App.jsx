@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ToggleableProductsContainer from './ToggleableProductsContainer.jsx';
-import QueryForm from './QueryForm.jsx';
+import ToggleableProductsContainer from './ToggleableProductsContainer';
+import QueryForm from './QueryForm';
 
-const App = props => (
-  props.isResultsPage ? (
+const App = ({ products, query, isResultsPage }) => (
+  isResultsPage ? (
     <ToggleableProductsContainer
-      products={props.products}
-      query={props.query}
+      products={products}
+      query={query}
     />
   ) : (
     <QueryForm />
