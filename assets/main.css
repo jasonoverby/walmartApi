@@ -82,6 +82,10 @@ button:hover,
   vertical-align: 1px;
 }
 
+.product-search {
+  margin-right: 0;
+}
+
 input {
   border-radius: 5px;
   color: #2f2951;

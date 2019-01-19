@@ -44,7 +44,7 @@ class ToggleableProductsContainer extends React.Component {
         )}
 
         <a
-          className="btn"
+          className="btn product-search"
           href="/"
         >
           Product Search
