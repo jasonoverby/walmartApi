@@ -2,33 +2,51 @@
   "name": "walmart-api",
   "version": "1.0.0",
   "description": "React views for a Hapi API to display Walmart products",
-  "main": "server.js",
+  "main": "main.js",
   "scripts": {
-    "start": "webpack --config webpack.js && node server",
-    "test": "jest"
+    "start": "webpack --config webpack.js && node main",
+    "test": "lab --leaks"
   },
   "author": "Jason Overby <j@jasonoverby.com> (http://www.jasonoverby.com/)",
   "repository": "https://github.com/jasonoverby/walmartApi",
   "license": "MIT",
-  "jest": {
-    "testEnvironment": "node"
-  },
   "dependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-object-assign": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "axios": "^0.18.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "1.x.x",
-    "babel-preset-react": "6.x.x",
-    "eslint": "^5.12.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
+    "babel-loader": "^8.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "code": "^5.2.4",
     "hapi": "^17.8.1",
     "hapi-react-views": "^10.0.0",
     "inert": "^5.1.2",
+    "lab": "^18.0.1",
     "prop-types": "^15.6.2",
-    "react": "16.x.x",
-    "react-dom": "16.x.x",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "vision": "^5.4.4",
-    "webpack": "3.x.x"
+    "webpack": "^4.28.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.4",
+    "babel-eslint": "^10.0.1",
+    "webpack-cli": "^3.2.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ],
+    "plugins": [
+      "transform-class-properties"
+    ]
   }
 }

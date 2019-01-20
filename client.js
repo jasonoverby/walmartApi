@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppComponent from './components/App.jsx';
+import AppComponent from './components/App';
 
 const App = React.createFactory(AppComponent);
 const mountNode = document.getElementById('root');

@@ -8,16 +8,18 @@ const formatProductData = (name) => {
     .replace(regexforExtraQuotes, '"');
 };
 
-const ProductInfo = (props) => {
-  const { product } = props;
+const ProductInfo = ({ product }) => {
   const productName = formatProductData(product.name);
-  const sizeStr = props.product.size ? props.product.size : 'N/A';
+  const sizeStr = product.size ? product.size : 'N/A';
   const size = formatProductData(sizeStr);
 
   return (
     <span>
       <h2>{productName}</h2>
-      <h3>Size: {size}</h3>
+      <h3>
+        Size:
+        {` ${size}`}
+      </h3>
     </span>
   );
 };

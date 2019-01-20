@@ -9,11 +9,14 @@ const {
   getMatchingProducts,
 } = require('./lib/getMatchingProducts');
 
-require('babel-core/register')({
-  presets: ['react', 'env'],
+require('@babel/register')({
+  presets: [
+    '@babel/preset-react',
+    '@babel/preset-env',
+  ],
 });
 
-const main = async () => {
+const hapiServer = async () => {
   // server at http://localhost:8000
   const server = hapi.server({
     host: 'localhost',
@@ -41,7 +44,7 @@ const main = async () => {
       // re-rendering
       renderMethod: 'renderToString',
       layoutPath: path.join(__dirname, 'components'),
-      layout: 'Html',
+      layout: 'Layout',
     },
   });
 
@@ -52,6 +55,16 @@ const main = async () => {
     // uses inert plugin for static file
     handler: {
       file: 'bundle.js',
+    },
+  });
+
+  // favicon
+  server.route({
+    method: 'GET',
+    path: '/favicon.ico',
+    // uses inert plugin for static file
+    handler: {
+      file: 'favicon.ico',
     },
   });
 
@@ -102,8 +115,7 @@ const main = async () => {
     },
   });
 
-  await server.start();
-  console.log(`Server is listening at ${server.info.uri}`);
+  return server;
 };
 
-main();
+module.exports = hapiServer;
