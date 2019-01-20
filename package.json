@@ -2,9 +2,9 @@
   "name": "walmart-api",
   "version": "1.0.0",
   "description": "React views for a Hapi API to display Walmart products",
-  "main": "server.js",
+  "main": "main.js",
   "scripts": {
-    "start": "webpack --config webpack.js && node server",
+    "start": "webpack --config webpack.js && node main",
     "test": "jest"
   },
   "author": "Jason Overby <j@jasonoverby.com> (http://www.jasonoverby.com/)",
