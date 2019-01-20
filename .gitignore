@@ -3,5 +3,4 @@ node_modules/
 yarn.*
 yarn-error.*
 package-lock.json
-products.json
 bundle.js
