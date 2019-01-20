@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "webpack --config webpack.js && node main",
-    "test": "lab -l"
+    "test": "lab --leaks"
   },
   "author": "Jason Overby <j@jasonoverby.com> (http://www.jasonoverby.com/)",
   "repository": "https://github.com/jasonoverby/walmartApi",

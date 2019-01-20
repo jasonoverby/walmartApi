@@ -83,6 +83,4 @@ describe('server requests', { timeout: 15000 }, async () => {
       });
     });
   });
-
-  // describe search
 });
