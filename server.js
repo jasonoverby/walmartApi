@@ -16,7 +16,7 @@ require('@babel/register')({
   ],
 });
 
-const main = async () => {
+const hapiServer = async () => {
   // server at http://localhost:8000
   const server = hapi.server({
     host: 'localhost',
@@ -115,8 +115,7 @@ const main = async () => {
     },
   });
 
-  await server.start();
-  console.log(`Server is listening at ${server.info.uri}`);
+  return server;
 };
 
-main();
+module.exports = hapiServer;
