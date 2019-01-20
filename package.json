@@ -5,15 +5,11 @@
   "main": "main.js",
   "scripts": {
     "start": "webpack --config webpack.js && node main",
-    "test": "jest"
+    "test": "lab -l"
   },
   "author": "Jason Overby <j@jasonoverby.com> (http://www.jasonoverby.com/)",
   "repository": "https://github.com/jasonoverby/walmartApi",
   "license": "MIT",
-  "jest": {
-    "transform": {},
-    "testEnvironment": "node"
-  },
   "dependencies": {
     "@babel/core": "^7.0.0",
     "@babel/plugin-transform-object-assign": "^7.0.0",
@@ -24,9 +20,11 @@
     "axios": "^0.18.0",
     "babel-loader": "^8.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "code": "^5.2.4",
     "hapi": "^17.8.1",
     "hapi-react-views": "^10.0.0",
     "inert": "^5.1.2",
+    "lab": "^18.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",

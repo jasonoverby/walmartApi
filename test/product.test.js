@@ -1,3 +1,6 @@
+const Lab = require('lab');
+const { expect } = require('code');
+
 const {
   getProducts,
   getIds,
@@ -6,47 +9,49 @@ const {
   getMatchingProducts,
 } = require('../lib/getMatchingProducts');
 
-const numOfProducts = 17;
+exports.lab = Lab.script();
+const { describe, test } = exports.lab;
 const numOfProductsMatchingBackpack = 3;
+const numOfProducts = 17;
 
-describe('ids', () => {
+describe('ids', { timeout: 15000 }, () => {
   test('getIds returns ids', async () => {
     const ids = await getIds();
-    expect(ids).toHaveLength(numOfProducts);
+    expect(ids).to.have.length(numOfProducts);
   });
 });
 
-describe('products', () => {
+describe('products', { timeout: 15000 }, () => {
   test('getProducts returns products', async () => {
     const products = await getProducts();
-    expect(products).toHaveLength(numOfProducts);
+    expect(products).to.have.length(numOfProducts);
   });
 
-  test('getProductData returns product', async () => {
+  test('getProductData returns product', { timeout: 15000 }, async () => {
     const ids = await getIds();
     const id = ids[0];
     const product = await getProductData(id);
-    expect(product).toHaveProperty('data');
+    expect(product).to.shallow.include('data');
   });
 });
 
-describe('products that match category', () => {
+describe('products that match category', { timeout: 15000 }, () => {
   test('getMatchingProducts returns correct num of products that match "backpack"', async () => {
     const category = 'backpack';
     const matchingProducts = await getMatchingProducts(category);
-    expect(matchingProducts).toHaveLength(numOfProductsMatchingBackpack);
+    expect(matchingProducts).to.have.length(numOfProductsMatchingBackpack);
   });
 
   test('getMatchingProducts returns all products when "all" is the category', async () => {
     const category = 'all';
     const matchingProducts = await getMatchingProducts(category);
-    expect(matchingProducts).toHaveLength(numOfProducts);
+    expect(matchingProducts).to.have.length(numOfProducts);
   });
 });
 
-describe('cached products', () => {
+describe('cached products', { timeout: 15000 }, () => {
   test('products.json file contains products', async () => {
     const products = await getProductsFromCache();
-    expect(products).toHaveLength(numOfProducts);
+    expect(products).to.have.length(numOfProducts);
   });
 });
