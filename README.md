@@ -1,5 +1,5 @@
 # Description
-This is an API to retrieve products (based on the product
+This is an API to retrieve products (based on a
 category) from a subset of Walmart's catalog.  The application uses
 [Hapi](https://hapijs.com/) to provide routes and [React](https://reactjs.org/)
 to provide views.
