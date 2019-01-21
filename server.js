@@ -40,8 +40,7 @@ const hapiServer = async () => {
     relativeTo: __dirname,
     path: 'components',
     compileOptions: {
-      // preserves the data-react-id attribute to allow for client-side
-      // re-rendering
+      // preserves the data-react-id attribute to allow for client-side re-rendering
       renderMethod: 'renderToString',
       layoutPath: path.join(__dirname, 'components'),
       layout: 'Layout',
