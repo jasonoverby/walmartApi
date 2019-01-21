@@ -28,7 +28,9 @@ If the category used is "*all*", all products from this subset will be shown.
 The initial loading of products when you first start the server may take
 a couple of seconds, but once the product catalog has been loaded, searching products
 or navigating directly to a route corresponding to a category should yield
-results immediately.
+results immediately.  Product data will be stored in the `products.json` file
+ within the `data` directory.  If the server is left running, product data will be
+ updated once daily.
 
 When viewing a list of products, the "*Show More*" button may be clicked to show
 additional information regarding a particular product.  While viewing an
