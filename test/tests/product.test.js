@@ -10,18 +10,18 @@ const {
 } = require('../../lib/getMatchingProducts');
 
 exports.lab = lab.script();
-const { describe, test } = exports.lab;
+const { experiment, test } = exports.lab;
 const numOfProductsMatchingBackpack = 3;
 const numOfProducts = 17;
 
-describe('ids', { timeout: 15000 }, () => {
+experiment('ids', { timeout: 15000 }, () => {
   test('getIds returns ids', async () => {
     const ids = await getIds();
     expect(ids).to.have.length(numOfProducts);
   });
 });
 
-describe('products', { timeout: 15000 }, () => {
+experiment('products', { timeout: 15000 }, () => {
   test('getProducts returns products', async () => {
     const products = await getProducts();
     expect(products).to.have.length(numOfProducts);
@@ -35,7 +35,7 @@ describe('products', { timeout: 15000 }, () => {
   });
 });
 
-describe('products that match category', { timeout: 15000 }, () => {
+experiment('products that match category', { timeout: 15000 }, () => {
   test('getMatchingProducts returns correct num of products that match "backpack"', async () => {
     const category = 'backpack';
     const matchingProducts = await getMatchingProducts(category);
@@ -49,7 +49,7 @@ describe('products that match category', { timeout: 15000 }, () => {
   });
 });
 
-describe('cached products', { timeout: 15000 }, () => {
+experiment('cached products', { timeout: 15000 }, () => {
   test('products.json file contains products', async () => {
     const products = await getProductsFromCache();
     expect(products).to.have.length(numOfProducts);

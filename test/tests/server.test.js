@@ -5,7 +5,7 @@ const hapiServer = require('../../server');
 
 exports.lab = lab.script();
 const {
-  describe,
+  experiment,
   test,
   beforeEach,
 } = exports.lab;
@@ -13,12 +13,12 @@ const numOfProductsMatchingBackpack = 3;
 const numOfProducts = 17;
 let server;
 
-describe('server requests', { timeout: 15000 }, async () => {
+experiment('server requests', { timeout: 15000 }, async () => {
   beforeEach(async () => {
     server = await hapiServer();
   });
 
-  describe('inject requests with server.inject', () => {
+  experiment('inject requests with server.inject', () => {
     test('GET request to root path returns OK 200', async () => {
       const response = await server.inject('/');
       expect(response.statusCode).to.equal(200);
@@ -33,7 +33,7 @@ describe('server requests', { timeout: 15000 }, async () => {
     });
   });
 
-  describe('category requests', () => {
+  experiment('category requests', () => {
     test('category request returns correct number of items', async () => {
       const category = 'backpack';
       const response = await server.inject(`/${category}`);
@@ -50,7 +50,7 @@ describe('server requests', { timeout: 15000 }, async () => {
       expect(items).to.have.length(numOfProducts);
     });
 
-    describe('category request for nonexistent category returns correct number of items', () => {
+    experiment('category request for nonexistent category returns correct number of items', () => {
       const category = 'there is no way that this will match';
 
       test('contains no matching products', async () => {
