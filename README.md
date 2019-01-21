@@ -20,7 +20,7 @@ searched for. Products will be searched based on the `categoryPath` property for
 each product in the product metadata.
 
 Alternatively, you may simply navigate to the url
-`http://localhost:8000/catgegory`, replacing `category` with your search term,
+`http://localhost:8000/category`, replacing `category` with your search term,
 to bypass the search page.
 
 If the category used is "*all*", all products from this subset will be shown.
