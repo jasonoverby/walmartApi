@@ -13,7 +13,7 @@ const Products = ({ products, handleToggleProduct, viewProduct }) => {
         product={product}
         handleToggleProduct={handleToggleProduct}
         viewProduct={viewProduct}
-        key={key}
+        key={`product-${key}`}
       />
     );
   });
