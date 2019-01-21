@@ -38,7 +38,9 @@ experiment('components', () => {
       const wrapper = shallow(<App isResultsPage query="backpack" products={[{}]} />);
       expect(wrapper.containsMatchingElement(<QueryForm />)).to.be.false();
       expect(
-        wrapper.containsMatchingElement(<ToggleableProductsContainer query="backpack" products={[{}]} />),
+        wrapper.containsMatchingElement(
+          <ToggleableProductsContainer query="backpack" products={[{}]} />,
+        ),
       ).to.be.true();
     });
   });
