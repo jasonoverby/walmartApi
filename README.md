@@ -14,7 +14,7 @@ it is possible to use a different API key by setting a PATH variable named
 # Usage
 To start the server, issue the command `npm start` after installation.
 Navigate to `http://localhost:8000` to view the search page for product
-categories. Enter your desired search term, click the "Search" button, and you
+categories. Enter your desired search term, click the "*Search*" button, and you
 will be routed to a page containing products corresponding to the category you
 searched for. Products will be searched based on the `categoryPath` property for
 each product in the product metadata.
