@@ -8,6 +8,7 @@
     },
     "rules": {
       "no-await-in-loop": 0,
-      "react/jsx-no-target-blank": 0
+      "react/jsx-no-target-blank": 0,
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     }
 }

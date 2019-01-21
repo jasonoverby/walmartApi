@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: path.join(__dirname, './client.js'),
+  entry: ['@babel/polyfill', path.join(__dirname, './client.js')],
   mode: 'development',
   resolve: {
     extensions: ['.js', '.jsx'],
