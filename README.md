@@ -26,7 +26,7 @@ to bypass the search page.
 If the category used is "*all*", all products from this subset will be shown.
 
 The initial loading of products when you first start the server may take
-a couple of seconds, but once the product catalog has loaded, searching products
+a couple of seconds, but once the product catalog has been loaded, searching products
 or navigating directly to a route corresponding to a category should yield
 results immediately.
 
