@@ -101,7 +101,16 @@ const hapiServer = async () => {
     handler: async (request, h) => {
       // guard against injection attacks
       const category = encodeURIComponent(request.params.category);
-      const matchingProducts = await getMatchingProducts(category);
+      let matchingProducts;
+      try {
+        matchingProducts = await getMatchingProducts(category);
+      } catch (err) {
+        if (err.response.status === 403) {
+          server.stop();
+          return '<h1>Apologies, but this account is over the rate limit.</h1>';
+        }
+      }
+
       const context = {
         query: category,
         products: matchingProducts,
@@ -110,7 +119,6 @@ const hapiServer = async () => {
 
       // sets string to be written to script in html component
       context.state = `window.state = ${JSON.stringify(context)};`;
-
       return h.view('App', context);
     },
   });
