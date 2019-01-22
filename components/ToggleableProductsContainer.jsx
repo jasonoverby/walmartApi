@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import ProductsContainer from './ProductsContainer';
 import Product from './Product';
 
-
 class ToggleableProductsContainer extends React.Component {
   state = {
     viewProduct: false,
