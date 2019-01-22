@@ -1,12 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const formatProductData = (name) => {
-  const regexForSurroundingQuotes = new RegExp(/(^"|"$)/, 'g');
-  const regexforExtraQuotes = new RegExp(/"{2,}/, 'g');
-  return name.replace(regexForSurroundingQuotes, '')
-    .replace(regexforExtraQuotes, '"');
-};
+const formatProductData = require('../lib/formatProductData');
 
 const ProductInfo = ({ product }) => {
   const productName = formatProductData(product.name);
