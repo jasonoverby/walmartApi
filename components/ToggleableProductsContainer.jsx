@@ -3,13 +3,27 @@ import PropTypes from 'prop-types';
 import ProductsContainer from './ProductsContainer';
 import Product from './Product';
 
+
 class ToggleableProductsContainer extends React.Component {
   state = {
     viewProduct: false,
     product: {},
+    window: null,
+    scrollPosition: 0,
   };
 
+  componentDidMount() {
+    this.setState({ window });
+  }
+
   handleToggleProduct = (product) => {
+    const getScrollPosition = window => window.scrollY;
+    const { viewProduct, window } = this.state;
+
+    if (!viewProduct) {
+      this.setState({ scrollPosition: getScrollPosition(window) });
+    }
+
     this.setState(prevState => ({
       product,
       viewProduct: !prevState.viewProduct,
@@ -17,11 +31,8 @@ class ToggleableProductsContainer extends React.Component {
   }
 
   render() {
-    const { product, viewProduct } = this.state;
-    const {
-      products,
-      query,
-    } = this.props;
+    const { product, viewProduct, scrollPosition } = this.state;
+    const { products, query } = this.props;
 
     return (
       <main>
@@ -33,6 +44,7 @@ class ToggleableProductsContainer extends React.Component {
           />
         ) : (
           <ProductsContainer
+            scrollPosition={scrollPosition}
             products={products}
             query={query}
             handleToggleProduct={this.handleToggleProduct}
