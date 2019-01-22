@@ -4,6 +4,10 @@ import ProductData from './ProductData';
 import ProductInfo from './ProductInfo';
 
 class Product extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   handleClick = () => {
     const { handleToggleProduct, product } = this.props;
     handleToggleProduct(product);
