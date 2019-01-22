@@ -15,9 +15,13 @@ const lab = require('lab');
 exports.lab = lab.script();
 const { experiment, test } = exports.lab;
 
+const scrollPosition = 0;
+const handleToggleProduct = () => {};
+const product = {};
+const query = 'test';
+
 experiment('components', () => {
   experiment('App toggles components based on value of props.isResultsPage', () => {
-    const query = 'test';
     const products = [{}];
 
     test('renders QueryForm if isResultsPage is false', () => {
@@ -35,20 +39,25 @@ experiment('components', () => {
     });
 
     test('renders ToggleableProductsContainer if isResultsPage is false', () => {
-      const wrapper = shallow(<App isResultsPage query="backpack" products={[{}]} />);
+      const backpackQuery = 'backpack';
+      const backpackProducts = [{}];
+      const wrapper = shallow(
+        <App isResultsPage query={backpackQuery} products={backpackProducts} />,
+      );
       expect(wrapper.containsMatchingElement(<QueryForm />)).to.be.false();
       expect(
         wrapper.containsMatchingElement(
-          <ToggleableProductsContainer query="backpack" products={[{}]} />,
+          <ToggleableProductsContainer
+            query={backpackQuery}
+            products={backpackProducts}
+          />,
         ),
       ).to.be.true();
     });
   });
 
   experiment('ToggleableProductsContainer toggles components based on value of state.viewProduct', () => {
-    const query = 'test';
     const products = [{}];
-    const product = {};
 
     test('renders Product if viewProduct is true', () => {
       const wrapper = shallow(
@@ -68,6 +77,7 @@ experiment('components', () => {
         <ProductsContainer
           products={products}
           query={query}
+          scrollPosition={scrollPosition}
           handleToggleProduct={wrapper.instance().handleToggleProduct}
           viewProduct={wrapper.state().viewProduct}
         />,
@@ -92,6 +102,7 @@ experiment('components', () => {
         <ProductsContainer
           products={products}
           query={query}
+          scrollPosition={scrollPosition}
           handleToggleProduct={wrapper.instance().handleToggleProduct}
           viewProduct={wrapper.state().viewProduct}
         />,
@@ -100,8 +111,6 @@ experiment('components', () => {
   });
 
   experiment('Products contains correct number of Product child components', () => {
-    const handleToggleProduct = () => {};
-
     test('contains number of elements based on products prop', () => {
       const products = [{}, {}, {}];
       const wrapper = shallow(
@@ -128,14 +137,12 @@ experiment('components', () => {
   });
 
   experiment('ProductsContainer heading toggles based on presence of matching products', () => {
-    const handleToggleProduct = () => {};
-    const query = 'test';
-
     test('contains "No Products Matching" if there are no matching products', () => {
       const products = [];
       const wrapper = shallow(
         <ProductsContainer
           viewProduct={false}
+          scrollPosition={scrollPosition}
           handleToggleProduct={handleToggleProduct}
           query={query}
           products={products}
@@ -151,6 +158,7 @@ experiment('components', () => {
       const wrapper = shallow(
         <ProductsContainer
           viewProduct={false}
+          scrollPosition={scrollPosition}
           handleToggleProduct={handleToggleProduct}
           query={query}
           products={products}
@@ -163,9 +171,6 @@ experiment('components', () => {
   });
 
   experiment('Product toggles based on value of viewProduct', () => {
-    const product = {};
-    const handleToggleProduct = () => {};
-
     test('renders ProductData if viewProduct is true', () => {
       const wrapper = shallow(
         <Product
@@ -192,11 +197,11 @@ experiment('components', () => {
         />,
       );
       expect(
-        wrapper.containsMatchingElement(<ProductData product={{}} />),
+        wrapper.containsMatchingElement(<ProductData product={product} />),
       ).to.be.false();
 
       expect(
-        wrapper.containsMatchingElement(<ProductInfo product={{}} />),
+        wrapper.containsMatchingElement(<ProductInfo product={product} />),
       ).to.be.true();
     });
 
