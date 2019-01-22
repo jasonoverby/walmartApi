@@ -12,12 +12,13 @@ it is possible to use a different API key by setting a PATH variable named
 `WALMART_API_KEY`.
 
 # Usage
-To start the server, issue the command `npm start` after installation.
-Navigate to `http://localhost:8000` to view the search page for product
-categories. Enter your desired search term, click the "*Search*" button, and you
-will be routed to a page containing products corresponding to the category you
-searched for. Products will be searched based on the `categoryPath` property for
-each product in the product metadata.
+To start the server, issue the command `npm start` after installation. Navigate
+to `http://localhost:8000` to view the search page for product categories. Enter
+your desired search term, click the "*Search*" button, and you will be routed to
+a page containing products corresponding to the category you searched for.
+Products will be searched based a concatenation of the values for the
+`longDescription` and `shortDescription` properties for each product in the
+product metadata.
 
 Alternatively, you may simply navigate to the url
 `http://localhost:8000/category`, replacing `category` with your search term,
