@@ -18,6 +18,7 @@ const setUpDomEnvironment = () => {
 
   global.window = window;
   global.document = window.document;
+  global.window.scrollTo = () => {};
   global.navigator = {
     userAgent: 'node.js',
   };
